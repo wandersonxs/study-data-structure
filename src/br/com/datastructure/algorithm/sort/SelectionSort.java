@@ -17,12 +17,10 @@ public class SelectionSort {
     public static void main(String[] args) {
 
         int[] iArray = new int[]{49, 51, 100, -7, 19, 8 , 43, 23, 10, 44};
-        int countLoopToSort = 0;
 
         for (int lastUnsortedIndex = iArray.length -1; lastUnsortedIndex > 0; lastUnsortedIndex--) {
             int largest = 0;
             for (int i = 1; i <= lastUnsortedIndex; i++) {
-                ++countLoopToSort;
                 if(iArray[i] > iArray[largest]){
                     largest = i;
                 }
@@ -31,7 +29,6 @@ public class SelectionSort {
         }
 
         Arrays.stream(iArray).forEach(System.out::println);
-        System.out.println("Count number of times loop = " + countLoopToSort);
     }
 
 
